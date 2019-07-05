@@ -17,13 +17,11 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-    predictions = X * theta;
-    x = X(:,2);
 
-    theta0 = theta(1) - alpha * (1/m) * sum(predictions - y);
-    theta1 = theta(2) - alpha * (1/m) * sum((predictions - y) .* x);
 
-    theta = [theta0; theta1];
+
+
+
 
     % ============================================================
 
@@ -31,7 +29,5 @@ for iter = 1:num_iters
     J_history(iter) = computeCost(X, y, theta);
 
 end
-
-min(J_history);
 
 end
